@@ -1,0 +1,281 @@
+*{padding: 0; margin: 0; list-style: none;}
+
+/*상단 메뉴바*/
+.header{
+    height: 20px;
+    padding: 1rem;
+    color: black;
+    background: silver;
+    font-weight: bold;
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    position: relative;
+}
+.header > #logo{ position:absolute; position: center;top:12px}
+.header > h1 > a{ position:relative; top: -10px; left: 35px;text-decoration:none; color:black;}
+
+.topMenu > ul{
+    text-align: center;
+}
+
+.topMenu > ul > li{
+    display: inline-block;
+    position: relative;
+    left:50px
+}
+.topMenu > ul > li:hover{
+    text-decoration-line: underline;
+    transition: background-color 0.3s; transition: background-color 0.3s;
+}
+
+.topMenu > ul > li > a{
+    display: block;
+    padding:0 40px;/*메뉴 간 간격*/
+    text-decoration: none;
+    color: black;
+}
+
+.topMenu ul ul{
+    display:none;
+    position: absolute;
+    width: 100%;
+}
+
+.topMenu ul ul a{
+    display: block;
+    line-height: 40px;/*드롭다운되는 박스 길이*/
+    background-color: silver;/*드롭 다운 박스 색*/
+    font-size: 16px;
+    text-decoration:none; color:black;
+
+    border: 1.8px outset #fff;
+    border-radius: 0;
+    -webkit-box-shadow: 1.5px 1.5px #000;
+    box-shadow: 1.5px 1.5px #000;
+}
+
+.topMenu ul ul a:hover{
+    background-color: #fff;
+}
+
+.topMenu li:hover ul{
+    display: block;
+}
+
+/********************************************************************************************************/
+
+.body{ background-color: teal;}
+
+/********************************************************************************************************/
+
+/*80*/
+.headTitle_First{
+    color:white; font-family: SSangMoon; font-size: 70px; 
+    padding-top: 40px; padding-left: 20px;
+    text-align: center;
+}
+
+/*90*/
+.headTitle_Second{
+    color:white; font-family:HE; font-size: 70px;
+    padding-top: 45px; padding-left: 20px;
+    text-align: center;
+}
+
+/********************************************************************************************************/
+
+/********************************************************************************************************/
+/*엘범 자켓*/
+.container{    
+    display: table;/*사진 크기 맞추기*/
+    padding: 40px;
+    margin: 20px 30px;/*소제목과의 세로 간격*/
+    display: flex;
+    flex-flow: row wrap;/*가로로 정렬하고(row), 꽉차면 줄 바꾸기(wrap)*/
+}
+
+.box{
+    display: table-cell;
+    vertical-align: middle;
+
+    margin: 20px 20px;
+    transition: 1s;
+}
+
+.box > img{
+    max-width:300px;
+    max-height:300px;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+.box:hover{
+    transform: scale(1.3);
+    z-index: 0.1;
+}
+
+.box>img:hover{box-shadow: 2px 2px 12px black; transition: 1s;}
+
+.albumTitle{color:white; font-family: SSangMoon; font-size: 20px;}
+
+/********************************************************************************************************/
+/*modal*/
+
+.modalbox{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    position:fixed; 
+    display: flex;
+    justify-content: center;/*세로 중앙에 띄우기*/
+    align-items: center;/*화면 가로 중앙에 띄우기*/
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s opacity 0, 5s;
+}
+
+.mb-active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal{
+    /*modal창 크기*/
+    width: 80%;
+    height: 80%;
+
+    box-shadow: 1px 1px 0 0 #424242;
+    border: 1px solid #fff;
+    border-right-color: #848484;
+    border-bottom-color: #848484;
+    border-radius: 2px;
+    overflow:hidden;/*화면 작아지면 내용물 튀어나오지 않게 하기*/
+
+    background: silver;
+    padding: 2px;
+    z-index: 99;
+}
+
+.modal-header{
+    height: 32px;
+    background: -webkit-linear-gradient(left,#08216b,#a5cef7)!important;
+    color:white;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 6px;
+    padding-right: 6px;
+    
+    position: relative;
+}
+
+.btn_close{
+    position: absolute;
+    top: 2px;
+    right: 10px;
+
+    /*버튼 경계선 스타일 지정*/
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-right-color: #424242;
+    border-bottom-color: #424242;
+    border-radius: 1px;
+
+    background: silver;
+    color: black;
+
+    margin-top: 5px;
+    padding-bottom: 10px;
+    height: 22px;
+    width: 22px;
+}
+
+.btn_close:hover {
+    
+    border: 2px inset #fff;
+    background: silver;
+    color: #424242;
+    box-shadow: -1px -1px #000;
+}
+
+.modal-header .btn_close span{
+    top: 4px;
+    right: 14px;
+    font-size: large;
+}
+
+.albumInfo{
+    padding-top: 8px;
+    padding-bottom: 1px;
+}
+
+/*Modal Body*/
+.modal-body{
+    display: inline-block;
+}
+
+/*엘범 이름*/
+#albumName{
+    font-family: Batang; font-size: 30px;
+    padding-top: 20px; padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+/*Image*/
+#imgBox{
+    display: inline-block;
+    width: 550px;
+    height: 550px;
+}
+
+#imgForModal{
+    width: 100%;
+    height: 100%;
+    display: table;
+    overflow: hidden;
+    object-fit: cover;
+    padding-left: 20px;
+    float: left;
+}
+
+#songList{
+    align-items: center;
+    display: block;
+    float:right;
+    padding-left: 60px;
+}
+
+.songNameList{
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.realSongName{
+    /* display: inline-block; */
+}
+
+/********************************************************************************************************/
+/*폰트 지정*/
+@font-face {
+    font-family: 'SSangMoon';
+    src: url('../assets/font/SongMyung-Regular.ttf');
+}
+@font-face {
+    font-family: 'BTTF';
+    src: url('../assets/font/BTTF.ttf');
+}
+@font-face {
+    font-family: 'HMKBS';
+    src: url('../assets/font/HMKBS\ \(휴먼\ 굵은\ 샘체\).TTF');
+}
+@font-face {
+    font-family: 'HE';
+    src: url('../assets/font/HumanNewExpo.ttf');
+}
