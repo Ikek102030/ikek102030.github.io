@@ -1,0 +1,122 @@
+*{padding: 0; margin: 0; list-style: none;}
+
+/*상단 메뉴바*/
+.header{
+    height: 20px;
+    padding: 1rem;
+    color: black;
+    background: silver;
+    font-weight: bold;
+    display: flex;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    text-align: left;
+    position: relative;
+    z-index: 99;
+}
+.header > #logo{ position:absolute; position: center;top:12px}
+.header > h1 > a{ position:relative; top: -10px; left: 35px;text-decoration:none; color:black;}
+
+.topMenu > ul{
+    text-align: center;
+}
+
+.topMenu > ul > li{
+    display: inline-block;
+    position: relative;
+    left: 50px;
+}
+.topMenu > ul > li:hover{
+    text-decoration-line: underline;
+    transition: background-color 0.3s; transition: background-color 0.3s;
+}
+
+.topMenu > ul > li > a{
+    display: block;
+    padding:0 40px;/*메뉴 간 간격*/
+    text-decoration: none;
+    color: black;
+}
+
+.topMenu ul ul{
+    display:none;
+    position: absolute;
+    width: 100%;
+}
+
+.topMenu ul ul a{
+    display: block;
+    line-height: 40px;/*드롭다운되는 박스 길이*/
+    background-color: silver;/*드롭 다운 박스 색*/
+    font-size: 16px;
+    text-decoration:none; color:black;
+
+    border: 1.8px outset #fff;
+    border-radius: 0;
+    -webkit-box-shadow: 1.5px 1.5px #000;
+    box-shadow: 1.5px 1.5px #000;
+}
+
+.topMenu ul ul a:hover{
+    background-color: #fff;
+}
+
+.topMenu li:hover ul{
+    display: block;
+}
+/*******************************************************************************************************/
+
+.body{ background-color: teal; font-family: 'SSangMoon';}
+
+/********************************************************************************************************/
+
+.intro{
+    height: 100vh;
+}
+
+.intro video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro h1{
+    position: absolute;
+    top:50%;
+    left: 40%;
+    transform: translate(-50% -50%);
+    font-size: 100px;
+    font-family: BTTF;
+    color: rgba(255, 255, 255, 0.863);
+
+}
+
+section{
+    height: 100vh;
+    color:#000;
+}
+
+section h1{
+    padding-top: 300px;
+    text-align: center;
+    font-size: 80px;
+}
+
+/********************************************************************************************************/
+/*폰트 지정*/
+@font-face {
+    font-family: 'SSangMoon';
+    src: url('../assets/font/SongMyung-Regular.ttf');
+}
+@font-face {
+    font-family: 'BTTF';
+    src: url('../assets/font/BTTF.ttf');
+}
+@font-face {
+    font-family: 'HMKBS';
+    src: url('../assets/font/HMKBS\ \(휴먼\ 굵은\ 샘체\).TTF');
+}
+@font-face {
+    font-family: 'HE';
+    src: url('../assets/font/HumanNewExpo.ttf');
+}
