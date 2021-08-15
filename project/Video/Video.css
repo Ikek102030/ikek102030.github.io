@@ -66,7 +66,7 @@
 }
 /*******************************************************************************************************/
 
-.body{ background-color: teal; font-family: 'SSangMoon';}
+.body{ background-color: black;}
 
 /********************************************************************************************************/
 
@@ -87,19 +87,63 @@
     transform: translate(-50% -50%);
     font-size: 100px;
     font-family: BTTF;
-    color: rgba(255, 255, 255, 0.863);
-
+    color: rgba(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
 }
 
-section{
+.intro h5{
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    transform: translate(-50% -50%);
+    font-family: SSangMoon;
+    font-size: 50px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.scd{
     height: 100vh;
-    color:#000;
+    line-height: 0;/*씬 사이의 흰 공간 없애기*/
 }
 
-section h1{
-    padding-top: 300px;
-    text-align: center;
-    font-size: 80px;
+.scd h1{
+    position: relative;
+    top:50%;
+    left: 20%;
+    transform: translate(-50% -50%);
+    font-size: 100px;
+    font-family: SsangMoon;
+    color: rgba(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.video2{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.chapter1{
+    height: 100vh;
+    line-height: 0;/*씬 사이의 흰 공간 없애기*/
+}
+
+.chapter1 h1{
+    position: relative;
+    top:50%;
+    left:18%;
+    transform: translate(-50% -50%);
+    font-size: 100px;
+    font-family: SsangMoon;
+    color: rgba(255, 255, 255);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+
+.video3{
+    background-color: black;
+    width: 100%;
+    height: 100%;
 }
 
 /********************************************************************************************************/
