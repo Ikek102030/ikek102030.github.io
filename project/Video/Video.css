@@ -2,6 +2,10 @@
 
 /*상단 메뉴바*/
 .header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+
     height: 20px;
     padding: 1rem;
     color: black;
@@ -11,7 +15,6 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     text-align: left;
-    position: relative;
     z-index: 99;
 }
 .header > #logo{ position:absolute; position: center;top:12px}
