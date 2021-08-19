@@ -129,7 +129,7 @@
 
 .chapter1{
     height: 100vh;
-    line-height: 0;/*씬 사이의 흰 공간 없애기*/
+    line-height: 0;
 }
 
 .chapter1 h1{
@@ -147,6 +147,97 @@
     background-color: black;
     width: 100%;
     height: 100%;
+}
+
+/********************************************************************************************************/
+
+.section{
+    line-height: 0;
+    background-color: #000;
+}
+
+.section input[id*='slide']{
+    display: none;
+}
+.section .slidewrap{
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.section .slideList{
+    white-space: nowrap;
+    font-size: 0;
+}
+.section .slideList > li{
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    overflow: hidden;
+    transition: all .5s;
+}
+.section .slideList>li>a{
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.section .slideList>li>a img{
+    /* width: 80%; max-height: 90%; overflow: hidden; */
+    width: 100%; max-height: 20%;
+    
+}
+.section .slideList label{
+    position: absolute;
+    z-index: 10;
+    top:50%;
+    transform: translateY(-50%);
+    padding:50px;
+    cursor: pointer;
+}
+.section .slideList .left{
+    left: 30px;
+    background: url('../assets/icon/Arrow_left.png') center center /100% no-repeat;
+}
+.section .slideList .right{
+    right: 30px;
+    background: url('../assets/icon/Arrow_Right.png') center center /100% no-repeat;
+}
+
+.section [id='slide01']:checked ~ .slidewrap .slideList > li {transform: translateX(0%);}
+.section [id='slide02']:checked ~ .slidewrap .slideList > li {transform: translateX(-100%);}
+.section [id='slide03']:checked ~ .slidewrap .slideList > li {transform: translateX(-200%);}
+.section [id='slide04']:checked ~ .slidewrap .slideList > li {transform: translateX(-300%);}
+.section [id='slide05']:checked ~ .slidewrap .slideList > li {transform: translateX(-400%);}
+.section [id='slide06']:checked ~ .slidewrap .slideList > li {transform: translateX(-500%);}
+.section [id='slide07']:checked ~ .slidewrap .slideList > li {transform: translateX(-600%);}
+
+.section .slideList .textbox{
+    position:relative;
+    z-index: 1;
+    transition: all .5s;
+}
+.section .slideList .textbox h1 {
+    font-size: 100px; 
+    font-family: SSangMoon;
+    transform: translateY(50px);
+    float:left;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+.section .slideList .textbox h2 {
+    font-size: 90px; 
+    font-family: SSangMoon;
+    transform: translateY(130px);
+    float:left;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+}
+.section .slideList .textbox h3 {
+    font-size: 90px; 
+    font-family: SSangMoon;
+    transform: translateY(210px);
+    float:left;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
 }
 
 /********************************************************************************************************/
