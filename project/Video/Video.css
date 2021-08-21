@@ -108,11 +108,9 @@
 /********************************************************************************************************/
 
 .chapter1{
-    position:absolute;
+    position:relative;
     width: 100%;
-    right: 0;
     min-height: 100vh;
-    padding:100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -122,7 +120,52 @@
     overflow: hidden;
 }
 
-.chapter1 video{
+.chapter2{
+    position: relative;
+    width: 100%;
+    right: 0;
+    min-height: 100vh;
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color:white;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.chapter3{
+    position: relative;
+    width: 100%;
+    right: 0;
+    min-height: 100vh;
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color:white;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.chapter4{
+    position: relative;
+    width: 100%;
+    right: 0;
+    min-height: 100vh;
+    padding:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color:white;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.contents video{
     position: absolute;
     width: 100%;
     height: 90%;
@@ -140,7 +183,7 @@
 
 .text{
     margin-left: 200px;
-    margin-top: 800px;
+    margin-top: 400px;
     position: relative;
     z-index: 10;
     font-family: SSangMoon;
@@ -213,7 +256,7 @@
 }
 
 .music{
-    margin-top: 900px;
+    margin-top: 400px;
     margin-right: 20px;
     padding: 10px 10px 50px 10px;
 
@@ -225,6 +268,10 @@
     font-family: SSangMoon;
 }
 
+.music h3{
+    font-size: 30px;
+}
+
 .music img{
     width: 200px;
     float: left;
@@ -232,6 +279,7 @@
 
 .music p{
     padding-left: 220px;
+    font-size: 22px;
 }
 
 /********************************************************************************************************/
