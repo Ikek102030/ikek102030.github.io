@@ -208,6 +208,8 @@
     margin: 20px 0;
     font-weight: 400;
     max-width: 700px;/*펼쳐지는 길이 제한*/
+    background: rgba(0, 0, 0, 0.726);
+    padding: 15px 15px 15px 15px;
 }
 
 .text a{
@@ -227,38 +229,10 @@
     letter-spacing: 6px;
 }
 
-.pic{
-    position: absolute;
-    bottom: 20px;
-    z-index: 10;
-    display: flex;
-    overflow: hidden;    
-}
-
-.pic li{
-    list-style: none;
-    display: inline-block;
-    padding-left:20px;
-    padding-bottom: 50px;
-    padding-right: 20px;
-    transition: .5s;
-    width: 200px;
-    height: 200px;
-}
-
-.pic li img{
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.pic li:hover{
-    transform: scale(1.2);
-}
-
 .music{
     margin-top: 400px;
     margin-right: 20px;
-    padding: 10px 10px 50px 10px;
+    padding: 15px 15px 50px 15px;
 
     background: rgba(0, 0, 0, 0.726);
     width: 800px;
@@ -280,6 +254,12 @@
 .music p{
     padding-left: 220px;
     font-size: 22px;
+}
+
+.music a{
+    position: absolute;
+    color:white;
+    padding-left: 20px;
 }
 
 /********************************************************************************************************/
