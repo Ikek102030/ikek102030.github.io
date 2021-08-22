@@ -25,3 +25,18 @@ let scene2 = new ScrollMagic.Scene({
 })
     .setTween(textAnim)
     .addTo(controller);
+
+//Video1
+let accelamount = 0.5;
+let scrollpos = 0;
+let delay = 0;
+
+scene.on('update', e => {
+    scrollpos = e.scrollPos / 1000;
+});
+
+setInterval(() => {
+    delay += (scrollpos - delay) * accelamount;
+
+    video.currentTime = delay;
+}, 41.6);
