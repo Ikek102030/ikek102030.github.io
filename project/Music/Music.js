@@ -2,13 +2,9 @@ var box = document.getElementsByClassName('box');
 var modalbox = document.querySelector('.modalbox');
 var close = document.getElementsByClassName('btn_close');
 
-var albumTitle = document.getElementsByClassName('albumTitle');
 var albumName = document.getElementById('albumName');//Modal
-var albumInfo = document.getElementsByClassName('albumSongs');
 
-var songNameList = document.getElementsByClassName('songNameList');//<span> 대표 수록곡
 var songs = document.getElementById('songs');//<ul>기입력 수록곡 목록
-var songListForModal = document.getElementById('songList');//Modal
 var songList = document.getElementById('realSongName');//Modal <li>
 
 var video = document.getElementById('video');
@@ -57,3 +53,43 @@ for(var i = 0; i<box.length; i++){
 close[0].addEventListener('click', function(){
     modalbox.classList.remove('mb-active');
 })
+
+var btt = document.getElementById('backToTop');
+var doc = document.documentElement;
+var offset;
+var scrollPosition;
+var docHeight;
+
+//문서 높이 구하기
+docHeight = Math.max(doc.offsetHeight, doc.scrollHeight);//둘이 다른 결과가 나오는 경우가 있기 때문에 큰값 쓰기
+
+if (docHeight != 0) {
+    offset = docHeight / 4;//4분의 1 스크롤 하면 버튼 생성
+}
+
+//스크롤 이벤트
+window.addEventListener('scroll', function(){
+    scrollPosition = doc.scrollTop;//스크롤 양 확인
+    
+    btt.className = (scrollPosition>offset)?'visible':'';//class 이름 바꾸기
+});
+
+btt.addEventListener('click', function(e){
+    e.preventDefault();
+
+    scrollToTop();
+});
+
+function scrollToTop(){
+    //Interval로 일정 시간 딜레이를 적용한다.
+    var scrollInterval = setInterval(function(){
+        if(scrollPosition != 0){
+            //스크롤이 조금이라도 되있는 상태면 위로 올리기
+            window.scrollBy(0,-55);
+        }
+        else{
+            //스크롤이 안되어 있으면 변화 안주기
+            clearInterval(scrollInterval);
+        }
+    },15);
+}
