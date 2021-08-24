@@ -70,26 +70,4 @@ indicator1.addEventListener('click', function(e){
             break;
         //TODO 이벤트 추가
     }
-})
-
-window.addEventListener('scroll', function(){
-    scrollPosition = doc.scrollTop;//스크롤 양 확인
 });
-
-function scrollToTop(){
-    //Interval로 일정 시간 딜레이를 적용한다.
-    var scrollInterval = setInterval(function(){
-        if(scrollPosition != 0){
-            //스크롤이 조금이라도 되있는 상태면 위로 올리기
-            window.scrollBy(0,-55);
-        }
-        else{
-            //스크롤이 안되어 있으면 변화 안주기
-            clearInterval(scrollInterval);
-        }
-    },15);
-}
-
-function goSection(){
-    
-}
