@@ -291,6 +291,39 @@
 }
 
 /********************************************************************************************************/
+
+#backToTop{
+    width: 70px;
+    height: 40px;
+    text-align: center;
+
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background: silver;
+    color: black;
+    opacity: 0;
+    cursor: pointer;
+    transition: all .3s;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+
+    border: 1.8px outset #fff;
+    border-radius: 0;
+    -webkit-box-shadow: 1.5px 1.5px #000;
+    box-shadow: 1.5px 1.5px #000;
+}
+
+#backToTop:hover{
+    background: #fff;
+}
+
+#backToTop.visible{
+    opacity: 1;
+}
+
+/********************************************************************************************************/
 /*폰트 지정*/
 @font-face {
     font-family: 'SSangMoon';
