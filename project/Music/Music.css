@@ -243,7 +243,7 @@
 
 #imgForModal{
     position:absolute;
-    width: 30%;
+    width: 25%;
 
     overflow: hidden;/*Modal창 작아지면 사진 자르기*/
     padding-left: 20px;
@@ -251,7 +251,7 @@
 
 #songList{
     position: relative;
-    padding-left: 50%;
+    padding-left: 45%;
 }
 
 .songNameList{
