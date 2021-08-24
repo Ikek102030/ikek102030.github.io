@@ -1,5 +1,5 @@
 //section
-const intro = document.querySelector('.intro');
+const intro = document.querySelector('#intro');
 const video = intro.querySelector('video');
 const text = intro.querySelector('h5');
 
@@ -40,3 +40,56 @@ setInterval(() => {
 
     video.currentTime = delay;
 }, 41.6);
+
+//인디케이터
+var indicator = document.getElementsByClassName('indicator');
+var indiList = document.getElementsByClassName('indiList');
+var item = document.getElementsByClassName('l');
+var doc = document.documentElement;
+
+//문서 높이 구하기
+var docHeight = Math.max(doc.offsetHeight, doc.scrollHeight);//둘이 다른 결과가 나오는 경우가 있기 때문에 큰값 쓰기
+
+//인디케이터 클릭 이벤트
+var indicator1 = document.getElementById('indiList');
+
+indicator1.addEventListener('click', function(e){
+    e.preventDefault();
+
+    e.target.innerHTML
+
+    switch(e.target.innerHTML){
+        case "Intro":
+            document.location.href = '#intro';
+            break;
+        case '1980년대':
+            document.location.href = '#introVideo';
+            break;
+        case '1980':
+            document.location.href = '#chapter1';
+            break;
+        //TODO 이벤트 추가
+    }
+})
+
+window.addEventListener('scroll', function(){
+    scrollPosition = doc.scrollTop;//스크롤 양 확인
+});
+
+function scrollToTop(){
+    //Interval로 일정 시간 딜레이를 적용한다.
+    var scrollInterval = setInterval(function(){
+        if(scrollPosition != 0){
+            //스크롤이 조금이라도 되있는 상태면 위로 올리기
+            window.scrollBy(0,-55);
+        }
+        else{
+            //스크롤이 안되어 있으면 변화 안주기
+            clearInterval(scrollInterval);
+        }
+    },15);
+}
+
+function goSection(){
+    
+}
