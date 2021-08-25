@@ -15,16 +15,16 @@
 
                     <nav class='topMenu'>
                         <ul>
-                            <li><a href='../project/Main.html'>Home</a></li>
+                            <li><a href='../project/Main.html'><img src = '../project/assets/icon/homepage-1.png'/>Home</a></li>
     
-                            <li><a href='#'>Music</a>
+                            <li><a href='#'><img src="../project/assets/icon/cd_audio_cd_a-1.png"/>Music</a>
                                 <ul>
                                     <li><a href='../project/Music/80sMusic.html'>80년대</a></li>
                                     <li><a href='../project/Music/90sMusic.html'>90년대</a></li>
                                 </ul>
                             </li>
     
-                            <li><a href='#'>Video</a>
+                            <li><a href='#'><img src = '../project/assets/icon/video_-0.png'/>History</a>
                                 <ul>
                                     <li><a href='../project/Video/80sVideo.html'>80년대</a></li>
                                     <li><a href='../project/Video/90sVideo.html'>90년대</a></li>
@@ -37,12 +37,49 @@
         </div>
         
         <ul class='card_animation'>
-            <li><a href='../project/Music/80sMusic.html'>1980's</a></li>
-            <li><a href='../project/Music/90sMusic.html'>1990'S</a></li>
+            <li><a href='#' class = 'a'>1980's</a></li>
+            <li><a href='#' class = 'a'>1990's</a></li>
         </ul>
-    
-        <script>
+        
+        <!--Modal-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class='modalbox'>
+                    <div class="modal">
+                        <div class="modal-header">
+                            <h5 class="pathInfo"><img src='../project/assets/icon/computer_explorer_cool-4.png'>&nbsp;이동 경로 선택</h5>
+                            <button type="button" class='btn_close' data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" class="topright">&times;</span>
+                            </button>
+                        </div>
 
-        </script>
+                        <div class="modal-body">
+                            <ul class = 'jangSik'>
+                                <li>File</li>
+                                <li>Edit</li>
+                                <li>View</li>
+                                <li>Help</li>
+                            </ul>
+                            <div class='btn_Container'>
+                                <ul class='btn'>
+                                    <li><a href='#' class='btn_link'><img src='../project/assets/icon/cd_audio_cd_a-4.png'/><p>Music</p></a></li>
+                                    <li><a href='#' class='btn_link'><img src='../project/assets/icon/video_-2.png'/><p>History</p></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class = 'footer'>
+                <p>만든이: 이주호 행정학과 18101128</p>
+                <p>서울과학기술대학교 2021학년도 디스커버리학기 프로젝트</p>
+            </div>
+        </footer>
+
+        <script src="../project/Main.js"></script>
     </body>
 </html>
