@@ -31,6 +31,7 @@ let accelamount = 0.5;
 let scrollpos = 0;
 let delay = 0;
 
+//스크롤 위치 구하기
 scene.on('update', e => {
     scrollpos = e.scrollPos / 1000;
 });
@@ -53,14 +54,13 @@ var indiList1 = document.getElementById('indiList');
 indiList.addEventListener('click', function(e){
     e.preventDefault();
 
-    e.target.innerHTML
-
     switch(e.target.innerHTML){
         case "Intro":
             document.location.href = '#intro';
             break;
         case '1980년대':
             document.location.href = '#introVideo';
+            //scrollToLink('#introVideo');
             break;
         case '1980':
             document.location.href = '#chapter1';
@@ -88,3 +88,35 @@ indiList.addEventListener('click', function(e){
             document.location.href = '#chapter3';
     }
 });
+
+// var offset;
+// var scrollPosition;
+// var docHeight;
+
+// //문서 높이 구하기
+// docHeight = Math.max(doc.offsetHeight, doc.scrollHeight);//둘이 다른 결과가 나오는 경우가 있기 때문에 큰값 쓰기
+
+// if (docHeight != 0) {
+//     offset = docHeight / 4;//4분의 1 스크롤 하면 버튼 생성
+// }
+
+// //스크롤 이벤트
+// window.addEventListener('scroll', function(){
+//     scrollPosition = doc.scrollTop;//스크롤 양 확인
+    
+//     btt.className = (scrollPosition>offset)?'visible':'';//class 이름 바꾸기
+// });
+
+// function scrollToLink(link){
+//     //Interval로 일정 시간 딜레이를 적용한다.
+//     setInterval(function(){
+//         if(scrollPosition != 0){
+//             //스크롤이 조금이라도 되있는 상태면 위로 올리기
+//             window.scrollBy('#chapter1');
+//         }
+//         else{
+//             //스크롤이 안되어 있으면 변화 안주기
+//             clearInterval(scrollInterval);
+//         }
+//     },15);
+// }
