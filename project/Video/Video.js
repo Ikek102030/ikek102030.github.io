@@ -42,18 +42,15 @@ setInterval(() => {
 }, 41.6);
 
 //인디케이터
-var indicator = document.getElementsByClassName('indicator');
-var indiList = document.getElementsByClassName('indiList');
-var item = document.getElementsByClassName('l');
-var doc = document.documentElement;
 
 //문서 높이 구하기
+var doc = document.documentElement;
 var docHeight = Math.max(doc.offsetHeight, doc.scrollHeight);//둘이 다른 결과가 나오는 경우가 있기 때문에 큰값 쓰기
 
 //인디케이터 클릭 이벤트
-var indicator1 = document.getElementById('indiList');
+var indiList1 = document.getElementById('indiList');
 
-indicator1.addEventListener('click', function(e){
+indiList.addEventListener('click', function(e){
     e.preventDefault();
 
     e.target.innerHTML
@@ -68,6 +65,26 @@ indicator1.addEventListener('click', function(e){
         case '1980':
             document.location.href = '#chapter1';
             break;
-        //TODO 이벤트 추가
+        case '1983':
+            document.location.href = '#chapter2';
+            break;
+        case '1987':
+            document.location.href = '#chapter3';
+            break;
+        case '1988':
+            document.location.href = '#chapter4';
+            break;
+
+        case '1990년대':
+            document.location.href = '#introVideo';
+            break;
+        case '1991':
+            document.location.href = '#chapter1';
+            break;
+        case '1992':
+            document.location.href = '#chapter2';
+            break;
+        case '1997':
+            document.location.href = '#chapter3';
     }
 });
