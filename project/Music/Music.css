@@ -6,6 +6,7 @@
     top: 0;
     width: 100%;
 
+    position: fixed;
     height: 20px;
     padding: 1rem;
     color: black;
@@ -15,7 +16,6 @@
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     text-align: left;
-    z-index: 99;
 }
 .header > #logo{ position:absolute; position: center;top:12px}
 .header > h1 > a{ position:relative; top: -10px; left: 35px;text-decoration:none; color:black;}
@@ -30,8 +30,9 @@
     left:50px
 }
 .topMenu > ul > li:hover{
+    /*background-color: rgb(155, 155, 155);*/
     text-decoration-line: underline;
-    transition: background-color 0.3s; transition: background-color 0.3s;
+    transition: background-color 0.3s;
 }
 
 .topMenu > ul > li > a{
@@ -170,7 +171,7 @@
 
 .modal-header{
     height: 32px;
-    background: -webkit-linear-gradient(left,#08216b,#a5cef7)!important;
+    background: #08216b;
     color:white;
 
     padding-top: 0px;
@@ -222,8 +223,6 @@
 }
 
 /*Modal Body*/
-/* .modal-body{
-} */
 
 /*엘범 이름*/
 #albumName{
@@ -304,7 +303,6 @@
     color: black;
     opacity: 0;
     cursor: pointer;
-    transition: all .3s;
     display: inline-block;
     text-decoration: none;
     font-size: 20px;
@@ -316,11 +314,28 @@
 }
 
 #backToTop:hover{
-    background: #fff;
+    border: 2px inset #fff;
+    background: silver;
+    color: #424242;
+    box-shadow: -1px -1px #000;
 }
 
 #backToTop.visible{
     opacity: 1;
+}
+
+/********************************************************************************************************/
+/*footer*/
+
+.footer{
+    width: 100%;
+    height: 100px;
+    background: silver;
+}
+
+.footer p{
+    padding-top: 20px;
+    padding-left: 30px;
 }
 
 /********************************************************************************************************/
