@@ -62,13 +62,12 @@
 }
 
 .topMenu ul ul a:hover{
-    background-color: #fff;    
+    background-color: #fff;
 }
 
 .topMenu li:hover ul{
     display: block;
 }
-
 
 /********************************************************************************************************/
 /*시작 화면*/
@@ -100,10 +99,171 @@
 .card_animation li:nth-child(1):hover{flex: 1.4; font-size: 200px;  text-shadow: 6px 2px 5px yellow;}
 .card_animation li:nth-child(2):hover{
     flex: 1.4; font-size: 230px;  text-shadow: 6px 2px 5px rgb(255, 0, 200);
-    /* 밑줄 넣기 text-decoration-line: underline;
-    box-shadow: inset 0 -1px 0 rgb(0,154,0);*/
 }
 
+/********************************************************************************************************/
+/*footer*/
+
+.footer{
+    width: 100%;
+    height: 100px;
+    background: silver;
+}
+
+.footer p{
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+/********************************************************************************************************/
+/*Modal*/
+
+.modalbox{
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    position:fixed; 
+    display: flex;
+    justify-content: center;/*세로 중앙에 띄우기*/
+    align-items: center;/*화면 가로 중앙에 띄우기*/
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s opacity 0, 5s;
+}
+
+.mb-active{
+    visibility: visible;
+    opacity: 1;
+    background: rgba(36, 36, 36, 0.466)
+}
+
+.modal{
+    /*modal창 크기*/
+    width: 30%;
+    height: 30%;
+    max-width: 1400px;
+    max-height: 800px;
+
+    box-shadow: 1px 1px 0 0 #424242;
+    border: 1px solid #fff;
+    border-right-color: #848484;
+    border-bottom-color: #848484;
+    border-radius: 2px;
+    overflow:hidden;/*화면 작아지면 내용물 튀어나오지 않게 하기*/
+    
+    background: silver;
+    padding: 2px;
+    z-index: 99;
+}
+
+.modal-header{
+    height: 32px;
+    background: #08216b;
+    color:white;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 6px;
+    padding-right: 6px;
+    
+    position: relative;
+}
+
+.btn_close{
+    position: absolute;
+    top: 2px;
+    right: 10px;
+
+    /*버튼 경계선 스타일 지정*/
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-right-color: #424242;
+    border-bottom-color: #424242;
+    border-radius: 1px;
+
+    background: silver;
+    color: black;
+
+    margin-top: 5px;
+    padding-bottom: 10px;
+    height: 22px;
+    width: 22px;
+}
+
+.btn_close:hover {
+    border: 2px inset #fff;
+    background: silver;
+    color: #424242;
+    box-shadow: -1px -1px #000;
+}
+
+.modal-header .btn_close span{
+    top: 4px;
+    right: 14px;
+    font-size: large;
+}
+
+.pathInfo{
+    padding-top: 8px;
+    padding-bottom: 1px;
+}
+
+.a2{
+    display: none;
+}
+
+.modal-body .jangSik li{
+    display: inline-block;
+    font-family: W95FA;
+    font-size: 1em;
+    padding: 0 5px;
+    left:5px;
+}
+
+.btn_Container{
+    position: absolute;
+    width: 29%;
+    height: 21%;
+    background: #fff;
+    
+    margin:  0 10px 10px 7px;
+    
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-left-color: #424242;
+    border-top-color: #424242;
+    border-radius: 1px;
+    overflow: hidden;
+}
+
+.btn li{
+    display: inline-block;
+    padding: 0 23px;/*아이콘 간 간격*/
+    vertical-align: middle;
+}
+
+.btn li img{
+    width:150%;/*사진 크기*/
+}
+
+.btn li a{
+    position: relative;
+    text-decoration: none;
+    color:black;
+    font-family: W95FA;
+    top: 30px;
+    left: 10px;
+    
+}
+
+.btn li a p{
+    position: absolute;
+    padding-left: 24px;/*이름 위치*/
+}
 
 /********************************************************************************************************/
 /*폰트 지정*/
@@ -124,7 +284,7 @@
     font-family: 'HE';
     src: url('../project/assets/font/HumanNewExpo.ttf');
 }
-
-/********************************************************************************************************/
-
-  
+@font-face {
+    font-family: 'W95FA';
+    src: url('../project/assets/font/W95FA.otf');
+}
